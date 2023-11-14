@@ -1,5 +1,7 @@
 package pages;
 
+import static mobileTest.BaseTest.driver;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -29,34 +31,37 @@ public List<AndroidElement> cartList;
 public List<AndroidElement> productList;
 @AndroidFindBy(className ="android.view.View")
 public List<AndroidElement> productPrice;
-
-public AndroidElement getCartBtn() {
-	return cartBtn;
-}
-
-public List<AndroidElement> getCartList() {
-	return  cartList;
-}
-
-
-
-public List<AndroidElement> getProductList() {
-	return productList;
+@AndriodFindBy(xpath="//*[contains(@text,'Headphones')]")
+public AndroidElement Headphones;
+@AndriodFindBy(xpath="//*[contains(@text,'Bose SoundSport, Wireless Earbuds, (Sweatproof Bluetooth Headphones for Running and Sports), Aqua')]")
+public AndroidElement fhead;
+return productList;
 }
 
 public List<AndroidElement> getProductPrice() {
-	return productList;
+return productList;
 }
 
 public  String getProductNameFromCart() {
-	return productList.get(1).getText();
+return productList.get(1).getText();
 }
 
 
+public boolean getCartBtn() {
+	
+	return cartBtn.isDisplayed();
+}
 
+public List<AndroidElement> getCartList() {
+	
+	return  cartList;
+}
+public void addFirstHeadphonesListing() {
 
+    fhead.click();
 
 }
+
 	
 
 	      

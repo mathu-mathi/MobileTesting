@@ -1,0 +1,7 @@
+Device=samsung
+platformVersion=12
+appPackage=com.amazon.android.shopping
+appActivity=com.amazon.home
+
+
+
